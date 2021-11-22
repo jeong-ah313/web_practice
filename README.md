@@ -1,10 +1,12 @@
 # web_practice
 웹프로그래밍 연습
 
-![image](https://user-images.githubusercontent.com/72932028/142864868-90731509-9d6c-4b5f-8268-2acc7bdc6f0c.png)
+![슬라이드3](https://user-images.githubusercontent.com/72932028/142865158-447ba86d-d79e-4df6-b88d-ef72edff1cbe.JPG)
 
 
-![image](https://user-images.githubusercontent.com/72932028/142864411-153af497-d477-49ee-8a02-f2172ba71999.png)
 
-![image](https://user-images.githubusercontent.com/72932028/142864422-13c1dd9d-a71f-4a22-b8aa-8a069553b511.png)
+![슬라이드1](https://user-images.githubusercontent.com/72932028/142865101-1070789a-e657-4777-b328-c6b720c30b32.JPG)
+
+
+![슬라이드2](https://user-images.githubusercontent.com/72932028/142865107-94b95490-b434-4c54-875e-e759851973dd.JPG)
 
