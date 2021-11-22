@@ -1,0 +1,98 @@
+<!-- Javascript 관련 과제 #3-2 -->
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>겜블링 게임</title>
+    <style>
+        table {
+            border : 1px solid violet;
+            border-collapse : collapse;
+        }
+        td {
+            width : 50px;
+            height : 50px;
+            padding : 0px;
+            font : italic 50px consolas, sans-serif;
+            color : blue;
+            text-align : center;
+            background : linen;
+        }
+        div#msg {
+            font : italic 18px consolas, sans-serif;
+            color : magenta;
+            margin-top : 10px;
+        }
+        </style>
+
+    <script>
+        // to do
+        // 두 개의 function 만들기
+
+        //초기 변수
+        var gameon = true; // 게임이 진행 중이면 true
+        var gameArray = [0, 0, 0] // 3개 숫자에 대한 배열, 디폴트값
+
+        function gen(e){ //e를 인자로 받음
+
+
+            if(gameon == false) //게임 아직 시작 안됨
+                return; //종료
+
+            // generation 0~2 사이의 난수 생성
+            if (gameon == true)
+
+                var fir = document.getElementById("first");
+                var sec = document.getElementById("second");
+                var thi = document.getElementById("third");
+                var tf = document.getElementById("msg"); //tf: true false
+
+                if(e.target==fir){
+                    fir.innerHTML = Math.floor(Math.random()*3);
+                }
+                
+                if(e.target==sec){
+                    sec.innerHTML = Math.floor(Math.random()*3);
+                }
+                
+                if(e.target==thi){
+                    thi.innerHTML = Math.floor(Math.random()*3);
+                    if((thi == fir) && (thi == sec)) {
+                        tf.innerHTML = "Success(click here to do again)";
+                    }
+                    else {
+                        tf.innerHTML = "Fail(click here to do again)";
+                     }
+                }
+        }
+
+        function reset(){ //다시 게임 실행할 때, 초기화, 인자 x
+            for(var i=0; i < gameArray.length; i++)
+                gameArray[i] = 0;
+
+            document.getElementById("msg").innerHTML = " "
+            document.getElementById("first").innerHTML = 0; 
+            document.getElementById("second").innerHTML = 0;
+            document.getElementById("third").innerHTML = 0;
+
+            gameon = true;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>갬블링 게임</h3>
+    각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+    <hr>
+    <table>
+    <tr>
+    <td id="first" onclick="gen(event)">0</td> 
+    <td id="second" onclick="gen(event)">0</td>
+    <td id="third" onclick="gen(event)">0</td>  
+    </tr>
+    </table>
+    <div id="msg" onclick="reset()"></div> 
+
+</body>
+</html>

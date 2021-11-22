@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web-Programming HW1</title>
+</head> 
+<body>
+<hr>
+<h3> 버튼 만들기 </h3>
+<hr>
+<form name="fo" method="get">
+검색 : <input type="text" size="15" value="">
+	  <input type="button" value="Q1"> <br>
+submit 버튼 : <input type="submit" value="전송: 검색 폼에 넣는 입력값이 전송되고 사라짐"> <br>
+reset 버튼 : <input type="reset" value="리셋: 검색 폼에 넣은 입력값이 사라짐" > <br><br>
+
+<hr>
+<h3> 다양한 입력폼 만들기 </h3>
+<hr>
+분식종류 (datalist로 데이터목록이 보여야 함): 
+<input type="text" list="분식종류">
+<datalist id="분식종류">
+	<option value="떡볶이">
+	<option value="김밥">
+	<option value="순대">
+</datalist>
+<br><br>
+브라우저의 글자색 선택(컬러다이얼로그가 나오고 새로운 컬러 선택시 브라우저 전체 글자색 변경되어야 함)
+<input type="color" value="#00BFFF" onchange="document.body.style.color=this.value">
+<br><br>
+온도조절(-100~100): 
+<input type="range" min="-100" max="100" list="temperatures">
+<datalist id="temperatures">
+	<option value=-50 label="Low">
+	<option value=0 label="Medium">
+	<option value=50 label="High">
+</datalist>
+<br><br>
+<hr>
+<h4> 시간 정보 입력 HTM5 폼 요소들 </h4>
+<br>
+초기 세팅: 2021년 3월 21일 오전 9시 00분<br>
+(시간을 변경할 수 있어야 합니다.)
+<hr>
+<pre>
+month : <input type="month" value="2021-03"><br>
+week : <input type="week" value="2021-W12"><br>
+data : <input type="date" value="2021-03-21"><br>
+time : <input type="time" value="09:00"><br>
+</pre>
+</form>
+</body>
+</html>  
